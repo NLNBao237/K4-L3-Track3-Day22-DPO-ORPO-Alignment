@@ -1,0 +1,19 @@
+{
+  "compute_tier": "T4",
+  "base_model": "unsloth/Qwen3-1.7B-unsloth-bnb-4bit",
+  "reference": "models/sft-merged (precomputed)",
+  "beta": 0.5,
+  "lr": 5e-06,
+  "loss_type": [
+    "sigmoid"
+  ],
+  "final_train_loss": 0.7318585920333862,
+  "end_chosen_reward": 0.33976306915283205,
+  "end_rejected_reward": 0.3407308578491211,
+  "end_reward_gap": -0.0009677886962890625,
+  "eval_chosen_reward": 0.4079256057739258,
+  "eval_rejected_reward": 0.3269986915588379,
+  "eval_reward_gap": 0.0809269142150879,
+  "eval_reward_accuracy": 0.55,
+  "diagnosis": "INTENDED"
+}

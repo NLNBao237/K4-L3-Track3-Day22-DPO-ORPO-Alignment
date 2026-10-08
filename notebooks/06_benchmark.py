@@ -26,6 +26,7 @@
 
 # %%
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -62,6 +63,12 @@ def run_lm_eval(label: str, task: str, shots: int, limit: int | None) -> dict:
     if label == "dpo":
         model_args += f",peft={C.DPO_ADAPTER}"
     out_dir = C.EVAL_DIR / "lm_eval" / f"{label}-{task}"
+    # A finished run is reused, so a crash in a later benchmark does not cost the earlier
+    # ones again (IFEval alone takes hours on a 6 GB GPU). Set NB6_FORCE=1 to rerun everything.
+    done = sorted(out_dir.glob("**/results*.json"), key=lambda p: p.stat().st_mtime)
+    if done and os.environ.get("NB6_FORCE") != "1":
+        print(f"\n>>> {label} · {task}: reusing {done[-1].name}")
+        return json.loads(done[-1].read_text(encoding="utf-8"))
     cmd = [
         "lm_eval", "--model", "hf", "--model_args", model_args,
         "--tasks", task, "--num_fewshot", str(shots),
@@ -78,7 +85,7 @@ def run_lm_eval(label: str, task: str, shots: int, limit: int | None) -> dict:
     if proc.returncode != 0 or not files:
         print(proc.stderr[-2000:])
         raise RuntimeError(f"lm_eval failed for {label}/{task}")
-    return json.loads(files[-1].read_text())
+    return json.loads(files[-1].read_text(encoding="utf-8"))
 
 
 def score(result: dict, task: str, metric: str) -> tuple[float, float]:

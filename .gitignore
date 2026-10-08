@@ -49,3 +49,6 @@ hf_cache/
 .idea/
 .vscode/
 *.swp
+
+# Unsloth kernel cache
+unsloth_compiled_cache/

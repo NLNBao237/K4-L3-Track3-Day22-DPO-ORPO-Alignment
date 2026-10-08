@@ -1,0 +1,17 @@
+{
+  "base_model": "unsloth/Qwen3-1.7B-unsloth-bnb-4bit",
+  "reference": "models/sft-merged (precomputed)",
+  "pref_dataset": "bonus/data (gia sư Python gợi mở, 170 train / 30 held-out)",
+  "beta": 0.1,
+  "lr": 2e-05,
+  "epochs": 3.0,
+  "final_train_loss": 0.12235793368999175,
+  "end_chosen_reward": 3.4698493003845217,
+  "end_rejected_reward": -4.704853948950768,
+  "end_reward_gap": 8.174703192710876,
+  "eval_chosen_reward": 2.9180028597513834,
+  "eval_rejected_reward": -4.257574119170507,
+  "eval_reward_gap": 7.175577064355214,
+  "eval_reward_accuracy": 1.0,
+  "diagnosis": "INTENDED"
+}

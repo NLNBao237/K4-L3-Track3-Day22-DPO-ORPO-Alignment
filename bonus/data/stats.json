@@ -1,0 +1,16 @@
+{
+  "n_pairs": 200,
+  "n_train": 170,
+  "n_eval": 30,
+  "kind": {
+    "hint": 170,
+    "check": 30
+  },
+  "topics": 20,
+  "length_chars": {
+    "n": 200,
+    "chosen_median": 558.5,
+    "rejected_median": 535.0,
+    "chosen_longer_frac": 0.505
+  }
+}

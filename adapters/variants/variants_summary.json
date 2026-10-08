@@ -1,0 +1,36 @@
+{
+  "dpo": {
+    "eval_reward_accuracy": 0.51,
+    "eval_chosen_reward": 0.04155942872224841,
+    "eval_rejected_reward": 0.039291289070970375,
+    "mean_output_chars": 320.2,
+    "diagnosis": "INTENDED"
+  },
+  "rpo": {
+    "eval_reward_accuracy": 0.5,
+    "eval_chosen_reward": 0.07458111347397789,
+    "eval_rejected_reward": 0.07343440189724788,
+    "mean_output_chars": 303.05,
+    "diagnosis": "FAILURE"
+  },
+  "dpo_norm": {
+    "eval_reward_accuracy": 0.42,
+    "eval_chosen_reward": -0.03504579417873174,
+    "eval_rejected_reward": -0.0077504830568796024,
+    "mean_output_chars": 303.15,
+    "diagnosis": "FAILURE"
+  },
+  "ld_dpo": {
+    "eval_reward_accuracy": 0.49,
+    "eval_chosen_reward": 0.010217609668325167,
+    "eval_rejected_reward": -0.0014741055865306408,
+    "mean_output_chars": 301.4,
+    "diagnosis": "FAILURE"
+  },
+  "orpo": {
+    "start": "D:\\VScode\\K4-L3-Track3-Day22-DPO-ORPO-Alignment\\models\\sft-merged",
+    "eval_reward_accuracy": 0.6700000166893005,
+    "eval_log_odds_ratio": -0.6313960552215576,
+    "mean_output_chars": 320.2
+  }
+}

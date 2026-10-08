@@ -1,0 +1,21 @@
+{
+  "base_model": "unsloth/Qwen3-1.7B-unsloth-bnb-4bit",
+  "reference": "models/sft-merged (precomputed)",
+  "pref_dataset": "bonus/data (gia sư Python gợi mở, 170 train / 30 held-out)",
+  "loss_type": [
+    "sigmoid",
+    "sft"
+  ],
+  "beta": 0.1,
+  "lr": 5e-05,
+  "epochs": 5.0,
+  "final_train_loss": 1.919966203112935,
+  "end_chosen_reward": 18.92929432127211,
+  "end_rejected_reward": -4.354203542073567,
+  "end_reward_gap": 23.28349781036377,
+  "eval_chosen_reward": 12.828214232126872,
+  "eval_rejected_reward": -3.8322832678755123,
+  "eval_reward_gap": 16.66049755414327,
+  "eval_reward_accuracy": 1.0,
+  "diagnosis": "INTENDED"
+}

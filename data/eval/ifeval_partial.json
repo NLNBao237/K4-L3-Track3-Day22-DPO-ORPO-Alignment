@@ -1,0 +1,24 @@
+{
+  "note": "NB6 partial: only IFEval finished (GSM8K and Global-MMLU-vi failed with Windows OSError 1455, out of commit memory). Copied from data/eval/lm_eval/*-ifeval results (gitignored).",
+  "limit": 200,
+  "chat_template": true,
+  "dtype": "bfloat16",
+  "sft": {
+    "sample_len": 200,
+    "prompt_level_strict_acc,none": 0.42,
+    "prompt_level_strict_acc_stderr,none": 0.034987434930487206,
+    "inst_level_strict_acc,none": 0.5786163522012578,
+    "prompt_level_loose_acc,none": 0.42,
+    "prompt_level_loose_acc_stderr,none": 0.034987434930487206,
+    "inst_level_loose_acc,none": 0.5786163522012578
+  },
+  "dpo": {
+    "sample_len": 200,
+    "prompt_level_strict_acc,none": 0.43,
+    "prompt_level_strict_acc_stderr,none": 0.03509498954918328,
+    "inst_level_strict_acc,none": 0.5786163522012578,
+    "prompt_level_loose_acc,none": 0.435,
+    "prompt_level_loose_acc_stderr,none": 0.03514328173714407,
+    "inst_level_loose_acc,none": 0.5880503144654088
+  }
+}
